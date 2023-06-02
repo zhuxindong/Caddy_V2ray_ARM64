@@ -36,4 +36,4 @@ jobs:
             V2R_VERSION=${{ steps.v2ray.outputs.release }}
           push: true
           platforms: linux/arm64
-          tags: anerg/v2ray:latest, anerg/v2ray:${{ steps.v2ray.outputs.release }}
+          tags: ${{ secrets.DOCKERHUB_USER }}/v2ray-arm64:latest, ${{ secrets.DOCKERHUB_USER }}/v2ray-arm64:${{ steps.v2ray.outputs.release }}
