@@ -26,7 +26,7 @@ jobs:
         uses: docker/login-action@v2
         with:
           username: ${{ secrets.DOCKERHUB_USER }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          password: ${{ secrets.DOCKERHUB_PASS }}
 
       - name: Build and push
         uses: docker/build-push-action@v3
@@ -35,4 +35,5 @@ jobs:
           build-args: |
             V2R_VERSION=${{ steps.v2ray.outputs.release }}
           push: true
+          platforms: linux/arm64
           tags: anerg/v2ray:latest, anerg/v2ray:${{ steps.v2ray.outputs.release }}
