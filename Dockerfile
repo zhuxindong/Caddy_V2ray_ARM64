@@ -10,7 +10,7 @@ ARG EMAIL
 ENV TZ              Asia/Shanghai
 ENV DOMAIN          ${DOMAIN}
 ENV EMAIL           ${EMAIL}
-ENV V2R_URL         https://github.com/v2fly/v2ray-core/releases/download/${V2R_VERSION}/v2ray-linux-64.zip
+ENV V2R_URL         https://github.com/v2fly/v2ray-core/releases/download/${V2R_VERSION}/v2ray-linux-arm64-v8a.zip
 ENV V2R_PATH_CONF   /etc/v2ray
 ENV CADDY_PATH_CONF /etc/caddy
 
